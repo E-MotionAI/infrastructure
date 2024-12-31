@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: workouts-service
-          image: workouts-service
+          image: lopesdev/workouts-service:master
           imagePullPolicy: Never
           ports:
             - containerPort: 8080
