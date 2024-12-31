@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workouts-service-deployment
+  labels:
+    app: workouts-service
+spec:
+  replicas: 1
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app: workouts-service
+  template:
+    metadata:
+      labels:
+        app: workouts-service
+    spec:
+      containers:
+        - name: workouts-service
+          image: workouts-service
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          env:
+            - name: NODE_ENV
+              value: "prod"
+            - name: PORT
+              value: "3000"
+            - name: DB_CONN_STRING
+              value: "mongodb://localhost:27017"
+            - name: DB_NAME
+              value: "mongodb"
+            - name: WORKOUT_COLLECTION_NAME
+              value: "workouts"
+            - name: LOG_DIR
+              value: "logs"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: workouts-service
+spec:
+  selector:
+    app: workouts-service
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      nodePort: 30001
