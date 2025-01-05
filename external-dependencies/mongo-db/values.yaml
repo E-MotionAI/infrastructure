@@ -1,0 +1,18 @@
+global:
+  namespaceOverride: workout-ai
+# Authentication settings
+auth:
+  enabled: true
+  rootPassword: super-secret
+  username: workouts
+  password: super-secret
+  database: mongodb
+
+# Persistent storage settings
+persistence:
+  enabled: true
+  size: 4Gi
+
+# Disable replica set
+replicaSet:
+  enabled: false
