@@ -17,15 +17,13 @@ spec:
     spec:
       containers:
         - name: users-service
-          image: lopesdev/users-service:master
+          image: lopesdev/users-service:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
           env:
-            - name: WORKOUT_COLLECTION_NAME
-              value: "users"
-            - name: LOG_DIR
-              value: "logs"
+            - name: quarkus.mongodb.connection-string
+              value: "mongodb://root:example@localhost:27017/"
 ---
 apiVersion: v1
 kind: Service
@@ -38,5 +36,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 3000
-      nodePort: 30001
+      targetPort: 8080
+      nodePort: 30002

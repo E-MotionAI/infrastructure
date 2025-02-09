@@ -17,10 +17,10 @@ spec:
     spec:
       containers:
         - name: workouts-service
-          image: lopesdev/workouts-service:master
+          image: lopesdev/workouts-service:test
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 3000
           env:
             - name: NODE_ENV
               value: "prod"
