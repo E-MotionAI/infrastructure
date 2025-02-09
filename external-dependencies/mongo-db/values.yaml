@@ -4,9 +4,6 @@ global:
 auth:
   enabled: true
   rootPassword: super-secret
-  username: workouts
-  password: super-secret
-  database: mongodb
 
 # Persistent storage settings
 persistence:
