@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
   - workouts-service/deployment-manifest.yaml
   - users-service/deployment-manifest.yaml
+  - api-gateway/deployment-manifest.yaml
