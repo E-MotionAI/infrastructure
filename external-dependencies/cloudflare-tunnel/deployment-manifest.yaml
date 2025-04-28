@@ -60,5 +60,5 @@ data:
     no-autoupdate: true
     ingress:
     - hostname: linkify.systems
-      service: http://users-service.workout-ai.svc.cluster.local:80
+      service: http://licenses-web.workout-ai.svc.cluster.local:80
     - service: http_status:404
