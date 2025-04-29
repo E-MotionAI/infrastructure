@@ -3,5 +3,5 @@ kind: Kustomization
 
 resources:
   - licenses-web/deployment-manifest.yaml
-  - users-service/deployment-manifest.yaml
+  - products-service/deployment-manifest.yaml
   - api-gateway/deployment-manifest.yaml
