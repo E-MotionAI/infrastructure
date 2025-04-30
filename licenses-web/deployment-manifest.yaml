@@ -20,7 +20,7 @@ spec:
           image: lopesdev/licenses-web:v1.0.0
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 3000
 ---
 apiVersion: v1
 kind: Service
@@ -33,4 +33,4 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 80
+      targetPort: 3000
