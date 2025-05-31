@@ -1,1 +1,1 @@
-kubectl apply -f cloudflare-tunnel/deployment-manifest.yaml --namespace workout-ai
+kubectl apply -f cloudflare-tunnel/deployment-manifest.yaml --namespace magic-key

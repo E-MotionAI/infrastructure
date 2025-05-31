@@ -1,5 +1,5 @@
 global:
-  namespaceOverride: workout-ai
+  namespaceOverride: magic-key
 # Authentication settings
 auth:
   enabled: true

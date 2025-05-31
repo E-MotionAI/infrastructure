@@ -36,13 +36,13 @@ helm install mongodb -f mongo-db/values.yaml bitnami/mongodb
 cd ..
 
 # Create Kubernetes namespace
-kubectl create namespace workout-ai
+kubectl create namespace magic-key
 
 # Deploy all microservices
-kubectl apply -k . --namespace workout-ai
+kubectl apply -k . --namespace magic-key
 
 # Verify deployments
-kubectl get pods -namespace workout-ai
+kubectl get pods -namespace magic-key
 ```
 
 ## 📜 Folder Structure
