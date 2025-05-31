@@ -22,7 +22,7 @@ The command above will output a tunnel ID and credentials file.
 5. Create a secret in your Kubernetes cluster pointing to your tunnel credentials file:
 ```bash
 kubectl create secret generic tunnel-credentials \
---from-file=credentials.json=<path of credential file>
+--from-file=credentials.json=<path of credential file> --namespace magic-key
 ```
 
 5. Create a DNS record onto Cloudflare dashboard pointing to your tunnel id:
