@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: products-service
-          image: lopesdev/product-service:v1.0.0
+          image: lopesdev/product-service:v1.0.1
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
