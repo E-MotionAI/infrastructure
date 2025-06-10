@@ -61,4 +61,6 @@ data:
     ingress:
     - hostname: linkify.systems
       service: http://licenses-web.magic-key.svc.cluster.local:80
+    - hostname: auth.linkify.systems
+      service: http://keycloak.magic-key.svc.cluster.local:80
     - service: http_status:404

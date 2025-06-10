@@ -1,0 +1,44 @@
+# Global PostgreSQL settings
+global:
+  postgresql:
+    auth:
+      username: userSql
+      password: MyPassword#
+      database: keycloak
+
+# Keycloak Admin User Configuration
+auth:
+  adminUser: admin
+  adminPassword: admin
+
+# PostgreSQL Specific Configuration
+postgresql:
+  enabled: true
+  auth:
+    username: userSql
+    password: MyPassword#
+    database: keycloak
+
+# Kubernetes Service Configuration
+service:
+  type: NodePort
+  nodePorts:
+    http: 30080
+
+# Additional Keycloak Environment Variables
+extraEnvVars:
+  # Enable production mode to prevent thread blocking
+  - name: KC_PRODUCTION
+    value: "true"
+  - name: KC_PROXY
+    value: "edge"
+  - name: KC_HOSTNAME
+    value: "auth.linkify.systems"
+  - name: KC_HOSTNAME_STRICT
+    value: "true"
+  - name: KC_HTTP_ENABLED
+    value: "false"
+  - name: VERTX_WORKER_POOL_SIZE
+    value: "20"
+  - name: VERTX_EVENT_LOOP_POOL_SIZE
+    value: "8"
