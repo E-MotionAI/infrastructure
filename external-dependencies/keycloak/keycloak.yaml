@@ -33,7 +33,7 @@ extraEnvVars:
   - name: KC_PROXY
     value: "edge"
   - name: KC_HOSTNAME
-    value: "auth.linkify.systems"
+    value: "https://auth.linkify.systems"
   - name: KC_HOSTNAME_STRICT
     value: "true"
   - name: KC_HTTP_ENABLED
