@@ -42,3 +42,5 @@ extraEnvVars:
     value: "20"
   - name: VERTX_EVENT_LOOP_POOL_SIZE
     value: "8"
+  - name: KC_PROXY_HEADERS
+    value: "xforwarded"
