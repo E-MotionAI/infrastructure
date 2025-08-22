@@ -43,6 +43,9 @@ kubectl apply -k . --namespace magic-key
 
 # Verify deployments
 kubectl get pods -namespace magic-key
+
+# Deploy specific image version
+VERSION=${VERSION:-v1.0.2} envsubst < deployment-manifest.yaml | kubectl apply -f - --namespace magic-key
 ```
 
 ## 📜 Folder Structure
@@ -55,6 +58,5 @@ kubectl get pods -namespace magic-key
 ├── kustomization.yaml  
 ├── .gitignore  
 └── README.md  
-
 
 

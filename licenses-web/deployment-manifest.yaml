@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: licenses-web
-          image: lopesdev/licenses-web:v1.0.1
+          image: lopesdev/licenses-web:${VERSION}
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
