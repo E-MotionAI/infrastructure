@@ -21,6 +21,17 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
+          env:
+            - name: NEXT_PUBLIC_API_URL
+              value: "http://products-service:80"
+            - name: NEXTAUTH_URL
+              value: "https://linkify.systems"
+            - name: NEXTAUTH_SECRET
+              value: "kpyF9I93qEVOVhuM4NLxsf0rMfQ9Er+KthUPLuX84cY="
+            - name: KEYCLOAK_CLIENT_ID
+              value: "licenses-web-client"
+            - name: KEYCLOAK_ISSUER
+              value: "https://auth.linkify.systems/realms/magic-keys"
 ---
 apiVersion: v1
 kind: Service
